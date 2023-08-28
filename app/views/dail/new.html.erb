@@ -1,0 +1,64 @@
+<%= form_with(model: @dail, url: create_path, method: :post) do |form| %>
+  <main id="main" class="main">
+    <!-- <style type="text/css">
+      body{
+        overflow-x: hidden;
+        background: #262626;
+        color: white;
+        font-family: sans-serif;
+      }
+    </style> -->
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <div id="formfield">
+                <h5 class="card-title">Add Product form</h5>
+                <div class="row mb-3">
+                  <%= form.label :categories, class: "col-sm-2 col-form-label"%>
+                  <%= form.select :categories, options_for_select([["Select One", ""], "cars", "bike", "home appliances"], id: "dail_categories") %>
+                  <%#= form.select :categories, ["cars","bike","home appliances"], class: "form-control" ,name: "s1ct1", id: "s1ct1" %>
+                </div>
+                <div class="row mb-3">
+                  <%#= form.label :product, class: "col-sm-2 col-form-label" %>
+                  <%#= form.text_field :product, class: "form-control", id: "product" %>
+                  <%= form.label :product, class: "col-sm-2 col-form-label"%>
+                  <%= form.text_field :product, class: "form-control", id: "product" %>
+                </div>
+                <div class="row mb-3">
+                  <%= form.label :rent, class: "col-sm-2 col-form-label" %>
+                  <%= form.text_field :rent, class: "form-control", id: "rent" %>
+                </div>
+                <div class="row mb-3">
+                  <%= form.label :contact, class: "col-sm-2 col-form-label" %>
+                  <%= form.text_field :contact, class: "form-control", id: "contact" %>
+                </div>
+                <!-- <textarea cols="30" rows="10" id="textarea"></textarea> -->
+                <div class="text-center">
+                  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                  <%= form.submit "save" %>
+                  <%#= form.submit "save", onclick: 'validate_product()', type: "button" %>
+                  <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+                <% end %>
+              </div>
+                <div id="display-data" style="display: none;">
+                  <table id="data_stored_table">
+                    <br><input id="btn1" type="button" value="Add Product"></br>
+                  </table>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<script>
+  $(document).ready(function(){
+    $('#product').emojioneArea({
+      pickerPosition:"bottom"
+    });
+  });
+</script>
