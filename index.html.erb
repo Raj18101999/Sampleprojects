@@ -1,0 +1,29 @@
+<main id="main" class="main">
+  <table id="example" class="display" style="width:100%">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Categories</th>
+        <th>Product</th>
+        <th>Rent</th>
+        <th>Contact</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th>id</th>
+        <th>Categories</th>
+        <th>Product</th>
+        <th>Rent</th>
+        <th>Contact</th>
+      </tr>
+    </tfoot>
+  </table>
+</main>
+<script type="text/javascript">
+  $('#example').DataTable({
+    "processing": true,
+    "serverSide": true,
+    "ajax": '<%= product_details_path %>'
+  });
+</script>
