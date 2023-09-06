@@ -1,0 +1,63 @@
+ <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Data Tables</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Tables</li>
+          <li class="breadcrumb-item active">Data</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Datatables</h5>
+              
+              <!-- Table with stripped rows -->
+              <table class="table datatable">
+                <thead>
+                  
+                </thead>
+                <tbody>
+                  <th>Id:</th>
+                  <td><%= @dail.id %></td>
+                <tr>
+                  <th>Product:</th>
+                  <td><%= @dail.product %></td>
+                </tr>
+                <tr>
+                  <th>Rent:</th>
+                  <td><%= @dail.rent %></td>
+                </tr>
+                <tr>
+                  <th>Contact:</th>
+                  <td><%= @dail.contact %></td>
+                </tr>
+
+                <tr>
+                  <th>file:</th>
+                  <td><%= link_to 'Download', @dail.file, download: '' %></td>
+                </tr>
+
+                
+          
+                </tbody>
+              </table>
+              <!-- End Table with stripped rows -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+

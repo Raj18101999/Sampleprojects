@@ -1,0 +1,22 @@
+<main id="main" class="main">
+  <body>
+    <div class="map-area fix">
+      <div id="map"></div>
+    </div>
+    <footer class="fix">
+      <div class="wrapper">
+        <p>All Right Reserved By Your@Company</p>
+      </div>
+    </footer>
+  </body>
+</main>
+
+<script>
+  $(document).ready(function(){
+    var map = new GMaps({
+        el: '#map',
+        lat: 12.922915,
+        lng: 80.127457
+    });
+  });
+</script>

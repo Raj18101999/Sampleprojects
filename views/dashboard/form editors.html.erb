@@ -1,0 +1,63 @@
+<!-- <main id="main" class="main"> -->
+  <!-- <style>
+    .ancestors * { 
+      display: block;
+      border: 2px solid lightgrey;
+      color: lightgrey;
+      padding: 5px;
+      margin: 15px;
+    }
+  </style> -->
+  <body>
+    <!-- <input id="btn1" type="button" value="click">
+    <div class="sample">
+      <ul class="level-1">
+        <h1>Multiple selector</h1>
+        <i id="a">Computer</i>
+        <p class="b">Let be simple</p>
+        <p class="d">Let be simple</p>
+        <li class="c">Languages</li>
+        <span>span</span>
+      </ul>
+        <h1>End</h1>
+    </div> -->
+    <input id="btn1" type="button" value="click">
+    <div style="background:#98bf21;height:100px;width:100px;position:absolute;">jquery</div>
+    <!-- <div class="ancestors">
+      <div class="great-grand-parent" style="width:500px;">div (great-grandparent)
+        <ul class="grand-parent">ul (grandparent)  
+          <li>li (direct parent)
+            <span>child</span>
+          </li>
+        </ul>   
+      </div>
+    </div> -->
+  </body>
+<!-- </main> -->
+<!-- <script>
+  $(document).ready(function(){
+    $("#btn1").click(function(){
+      // $(".sample").children().css({"background":"pink"});
+      // $(".b").prev().css({"background":"pink"});
+      // $(".c").next().css({"background":"pink"});
+      // $(".c").parents().css({"background":"pink"});
+      // $("span").parent().css({"color": "red", "border": "2px solid red"});
+      // $("span").parents().css({"color": "red", "border": "2px solid red"});
+      // $("span").parentsUntil("div").css({"color": "red", "border": "2px solid red"});
+      // $( ".great-grand-parent" ).children().css({"color": "red", "border": "2px solid red"});
+      // $( ".grand-parent" ).children().css({"color": "red", "border": "2px solid red"});
+    });
+  });
+</script> -->
+<script>
+  $(document).ready(function(){
+    $("#btn1").click(function(){
+      $("div").animate({height: '250px',
+        width: '250px',
+        fontSize:'80px',
+        opacity:'0.5',
+        left:'700px'
+    },"slow");
+    });
+  });
+</script>

@@ -1,0 +1,354 @@
+<main id="main" class="main">
+  <!-- <div class="ibox"> -->
+  <!-- <div class="ibox-body"> -->
+  <!-- <style>
+      ul{
+          height: auto;
+          overflow: hidden;
+          width: 960px;
+          list-style: none;
+          background: #2c3e50;
+          margin: 15px auto 45px;
+          color: #2c3e50;
+      }
+       nav-item ul li{
+          padding: 15px 20px;
+          width: auto;
+          height: auto;
+          float: left;
+          cursor: pointer;
+      }
+      img{
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      .product-filter-btns {
+        padding: 3rem 0 2rem 0;
+        display: flex;
+        gap: 1.7rem;
+        flex-wrap: wrap;
+      }
+      .btn-filter {
+        display: inline-flex;
+        padding: 0.7rem 2rem;
+        border-radius: 2.7rem;
+        cursor: pointer;
+        border: 0.2rem solid var(--black);
+        color: var(--black);
+        font-weight: 500;
+        transition: all 0.5s ease-in;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+      *,
+      *::after,
+      *::before {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          text-decoration: none;
+          list-style-type: none;
+      }
+
+      :root {
+          --bg: #ececf0;
+          --card-bg: #FBFBFB;
+          --black: #1E2021;
+          --white: #ffffff;
+      }
+
+      html {
+          font-size: 62.5%;
+          font-family: 'Roboto', sans-serif;
+      }
+
+      body {
+          background: var(--bg);
+          font-size: 1.6rem;
+      }
+
+      .container {
+          max-width: 90rem;
+          margin: 0 auto;
+          padding: 0 1rem;
+      }
+
+      .product-filter-btns {
+          padding: 3rem 0 2rem 0;
+          display: flex;
+          gap: 1.7rem;
+          flex-wrap: wrap;
+      }
+
+      .btn-filter {
+          display: inline-flex;
+          padding: 0.7rem 2rem;
+          border-radius: 2.7rem;
+          cursor: pointer;
+          border: 0.2rem solid var(--black);
+          color: var(--black);
+          font-weight: 500;
+          transition: all 0.5s ease-in;
+      }
+
+      .btn-filter.mixitup-control-active {
+          transition: all 0.5s ease-in;
+          background: var(--black);
+          color: var(--white);
+      }
+
+      .product-filter-items {
+          padding: 5rem 0;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+          gap: 2rem;
+      }
+
+      .mix {
+          background: var(--card-bg);
+          border-radius: 1rem;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+      }
+
+      .item-top {
+          padding: 2rem 0 0.5rem 0;
+      }
+
+      .item-top img {
+          width: 100%;
+      }
+
+      .item-bottom {
+          padding: 2rem 2rem 1.5rem 2rem;
+      }
+
+      .item-heading {
+          font-size: 2.5rem;
+          color: var(--black);
+      }
+
+      .item-subheading {
+          font-size: 2.5rem;
+          color: rgb(97, 97, 97);
+          padding: 1rem 0 2rem 0;
+      }
+
+      .price-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+      }
+
+      .price {
+          font-size: 2rem;
+          color: var(--black);
+      }
+
+      .btn-cart {
+          display: inline-flex;
+          background: var(--black);
+          color: var(--white);
+          width: 4rem;
+          height: 4rem;
+          align-items: center;
+          justify-content: center;
+          border-radius: 1rem;
+      }
+
+      .btn-cart ion-icon {
+          font-size: 2.5rem;
+          --ionicon-stroke-width: 32px;
+      }
+
+      .btn-cart:hover ion-icon {
+          animation: down 0.5s linear;
+      }
+
+      @keyframes down {
+          0% {
+              transform: translateY(2rem);
+          }
+          100% {
+              transform: translateY(0rem);
+          }
+      }
+  </style> -->
+    <body>
+      <!-- <div class="nav-item">
+        <div class="product-filter-btns">
+          <li class="btn-filter" data-filter="all">ALL</li>
+          <li class="btn-filter" data-filter=".BMW">BMW</li>
+          <li class="btn-filter" data-filter=".Benz">Benz</li>
+          <li class="btn-filter" data-filter=".Audi">Audi</li>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 mix Audi ">
+            <img src="/assets/car-01" alt="">
+            <h5>Audi A4</h5>
+            <h6>Rent:Rs.10000/day</h6>
+          </div>
+          <div class="col-md-3 mix Audi">
+            <img src="/assets/car-02" alt="">
+            <h5>Audi A6</h5>
+            <h6>Rent:Rs.12000/day</h6>
+          </div>
+          <div class="col-md-3 mix BMW">
+            <img src="/assets/car-03" alt="">
+            <h5>BMW X1</h5>
+            <h6>Rent:Rs.12000/day</h6>
+          </div>
+          <div class="col-md-3 mix Benz">
+            <img src="/assets/car-04" alt="">
+            <h5>Benz SL</h5>
+            <h6>Rent:Rs.15000/day</h6>
+          </div>
+          <div class="col-md-3 mix BMW">
+            <img src="/assets/car-05" alt="">
+            <h5>BMW X3</h5>
+            <h6>Rent:Rs.13000/day</h6>
+          </div>
+          <div class="col-md-3 mix Benz">
+            <img src="/assets/car-06" alt="">
+            <h5>Benz GT</h5>
+            <h6>Rent:Rs.14000/day</h6>
+          </div>
+          <div class="col-md-3 mix BMW">
+            <img src="/assets/car-07" alt="">
+            <h5>BMW X5</h5>
+            <h6>Rent:Rs.14000/day</h6>
+          </div>
+          <div class="col-md-3 mix Audi">
+            <img src="/assets/car-08" alt="">
+            <h5>Audi A8</h5>
+            <h6>Rent:Rs.10000/day</h6>
+          </div>
+          <div class="col-md-3 mix Audi">
+            <img src="/assets/car-09" alt="">
+            <h5>Audi Q3</h5>
+            <h6>Rent:Rs.80000/day</h6>
+          </div>
+        </div>
+      </div> -->
+      <body>
+        <section id="product">
+          <div class="container">
+            <div class="product-filter-btns">
+              <li class="btn-filter" data-filter="all">ALL</li>
+              <li class="btn-filter" data-filter=".BMW">BMW</li>
+              <li class="btn-filter" data-filter=".Audi">Audi</li>
+              <li class="btn-filter" data-filter=".Benz">Benz</li>
+            </div>
+            <div class="product-filter-items">
+              <div class="mix BMW">
+                <div class="item-top">
+                  <img src="/assets/car-07.png" alt="Car" />
+                </div>
+                <div class="item-bottom">
+                  <h1 class="item-heading">BMW X5</h1>
+                  <h3 class="price">Rent:Rs.8000/day</h3>
+                </div>
+              </div>
+              <div class="mix Benz">
+                <div class="item-top">
+                  <img src="/assets/car-04.png" alt="Car" />
+                </div>
+                <div class="item-bottom">
+                  <h1 class="item-heading">Benz</h1>
+                  <h3 class="price">Rent:Rs.10000/day</h3>
+                </div>
+              </div>
+              <div class="mix Audi">
+                <div class="item-top">
+                  <img src="/assets/car-02.png" alt="Car" />
+                </div>
+                <div class="item-bottom">
+                  <h1 class="item-heading">Audi</h1>
+                    <h3 class="price">Rent:Rs.10000/day</h3>
+                </div>
+              </div>
+              <div class="mix Audi">
+                <div class="item-top">
+                  <img src="/assets/car-01.png" alt="Car" />
+                </div>
+                <div class="item-bottom">
+                  <h1 class="item-heading">Audi</h1>
+                  <h3 class="price">Rent:Rs.10000/day</h3>
+                </div>
+              </div>
+              <div class="mix BMW">
+                <div class="item-top">
+                  <img src="/assets/car-03.png" alt="Car" />
+                </div>
+                <div class="item-bottom">
+                  <h1 class="item-heading">BMW X3</h1>
+                  <h3 class="price">Rent:Rs.10000/day</h3>
+                </div>
+              </div>
+              <div class="mix BMW">
+                <div class="item-top">
+                  <img src="/assets/car-05.png" alt="Car" />
+                </div>
+                <div class="item-bottom">
+                  <h1 class="item-heading">BMW X8</h1>
+                  <h3 class="price">Rent:Rs.12000/day</h3>
+                </div>
+              </div>
+              <div class="mix Audi">
+                <div class="item-top">
+                  <img src="/assets/car-08.png" alt="Car" />
+                </div>
+                <div class="item-bottom">
+                  <h1 class="item-heading">Audi</h1>
+                  <h3 class="price">Rent:Rs.10000/day</h3>
+                </div>
+              </div>
+              <div class="mix Benz">
+                <div class="item-top">
+                  <img src="/assets/car-06.png" alt="Car" />
+                </div>
+                <div class="item-bottom">
+                  <h1 class="item-heading">Benz</h1>
+                  <h3 class="price">Rent:Rs.10000/day</h3>
+                </div>
+              </div>
+              <div class="mix Audi">
+                <div class="item-top">
+                  <img src="/assets/car-09.png" alt="Car" />
+                </div>
+                <div class="item-bottom">
+                  <h1 class="item-heading">Audi</h1>
+                  <h3 class="price">Rent:Rs.10000/day</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </body>
+  <!-- </div> -->
+  <!-- </div> -->
+</main>
+<script>
+  // $(document).ready(function(){
+    // var mixer = mixitup('.product-filter-btns');
+    // var mixer = mixitup(containerEl);
+    // var mixer = mixitup(containerEl, {
+    //     selectors: {
+    //         target: '.blog-item'
+    //     },
+    //     animation: {
+    //         duration: 300
+    //     }
+    // });
+  document.addEventListener('DOMContentLoaded', function() {
+    var mixer = mixitup('.product-filter-items');
+
+  });
+    $(".item-top").AutoLightbox({
+    width: 800,
+      height: 600
+    }); 
+  // });
+</script>

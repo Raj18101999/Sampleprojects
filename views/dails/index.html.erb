@@ -1,0 +1,22 @@
+<table class="table datatable">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Categories</th>
+      <th scope="col">Product</th>
+      <th scope="col">Rent</th>
+      <th scope="col">Contact</th>      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @dails.each do |dail| %>
+        <td><%= dail.id %></td>
+        <td><%= dail.categories %></td>
+        <td><%= dail.product %></td>
+        <td><%= dail.rent %></td>
+        <td><%= dail.contact %></td>
+    </tr>
+  <% end %> 
+  </tbody>
+</table>

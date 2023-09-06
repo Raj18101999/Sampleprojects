@@ -1,0 +1,183 @@
+<!-- <main id="main" class="main"> -->
+  <p id="array"></p>
+  <script>
+    var students = new Array("ram", "ravi", "praveen", "vishnu", "naveen");
+    Array.prototype.displayItems=function(){
+      for (i=0;i<students.length;i++){
+        document.write(students[i] + "<br />");
+      }
+    } 
+    document.getElementById("array").innerHTML = students;
+    // students.displayItems();
+    document.write("<br />The number of items in students array is " + students.length + "<br />");
+    document.write("<br />The SORTED students array<br />");
+    students.sort();
+    students.displayItems();
+    document.write("<br />The REVERSED students array<br />");
+    students.reverse();
+    students.displayItems();
+    document.write("<br />THE students array after REMOVING the LAST item<br />");
+    students.pop();
+    students.displayItems();
+    document.write("<br />THE students array after REMOVING the FIRST item<br />");
+    students.shift();
+    students.displayItems();
+    document.write("<br />THE students array after PUSH<br />");
+    students.push("kishore");
+    students.displayItems();
+    console.log(10);
+    console.log([10,56,76,87]);
+    console.log({fname:'ram',age:24});
+    console.table({fname:'ram',age:24});
+    console.error('custom error');
+    console.warn('sample error');
+    var a=10;
+    console.log(a)
+    var a=25;
+    console.log(a)
+    // let a=10;
+    // console.log(a)
+    // let a=65;
+    // console.log(a)
+
+  </script>
+</main>
+<%= form_with(model: @dail, url: create_path, method: :post) do |form| %>
+  <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Justdails</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Forms</li>
+          <li class="breadcrumb-item active">Justdails</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-6">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Add Product form</h5>
+              <form>
+                <div class="row mb-3">
+                  <%= form.label :product, class: "col-sm-2 col-form-label" %>
+                  <%= form.text_field :product, class: "form-control", id: 'product', required:true %>
+                </div>
+                <div class="row mb-3">
+                  <%= form.label :rent, class: "col-sm-2 col-form-label" %>
+                  <%= form.text_field :rent, class: "form-control", id: 'rent', required:true %>
+                </div>
+                <div class="row mb-3">
+                  <%= form.label :contact, class: "col-sm-2 col-form-label" %>
+                  <%= form.text_field :contact, class: "form-control", id: 'contact', required:true%>
+                </div>
+                <div class="text-center">
+                  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                  <%= form.submit "save", onsubmit: "event.preventDefault();onFormSubmit();" %>
+                  <%#= form.submit "save", onclick: 'validate_product()', type: "button" %>
+                  <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>rent</th>
+                            <th>Contact</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+    </section>
+  <!-- </main> -->
+<% end %>
+<script>
+  // var form = document.getElementById('form')
+  // form.addEventListener('submit',function(event){
+  //   event.preventDefault()
+  // })
+//   function formSubmit(event) {
+//   var url = "/post/url/here";
+//   var request = new XMLHttpRequest();
+//   request.open('POST', url, true);
+//   request.onload = function() { // request successful
+//   // we can use server response to our request now
+//     console.log(request.responseText);
+//   };
+
+//   request.onerror = function() {
+//     // request failed
+//   };
+
+//   request.send(new FormData(event.target)); // create FormData from form that triggered event
+//   event.preventDefault();
+// }
+
+// // and you can attach form submit event like this for example
+// function attachFormSubmitEvent(formId){
+//   document.getElementById(formId).addEventListener("submit", formSubmit);
+// }
+  function onFormSubmit() {
+    if (validate()) {
+        var formData = readFormData();
+        if (selectedRow == null)
+            insertNewRecord(formData);
+        else
+            updateRecord(formData);
+        resetForm();
+    }
+}
+
+function readFormData() {
+    var formData = {};
+    formData["product"] = document.getElementById("product").value;
+    formData["rent"] = document.getElementById("rent").value;
+    formData["contact"] = document.getElementById("contact").value;
+    return formData;
+}
+
+function insertNewRecord(data) {
+    var table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.length);
+    cell1 = newRow.insertCell(0);
+    cell1.innerHTML = data.product;
+    cell2 = newRow.insertCell(1);
+    cell2.innerHTML = data.rent;
+    cell3 = newRow.insertCell(2);
+    cell3.innerHTML = data.contact;
+    cell4 = newRow.insertCell(3);
+    
+    cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+                       <a onClick="onDelete(this)">Delete</a>`;
+}
+
+function resetForm() {
+    document.getElementById("product").value = "";
+    document.getElementById("rent").value = "";
+    document.getElementById("contact").value = "";
+    selectedRow = null;
+}
+
+// function validate() {
+//     isValid = true;
+//     if (document.getElementById("fullName").value == "") {
+//         isValid = false;
+//         document.getElementById("fullNameValidationError").classList.remove("hide");
+//     } else {
+//         isValid = true;
+//         if (!document.getElementById("fullNameValidationError").classList.contains("hide"))
+//             document.getElementById("fullNameValidationError").classList.add("hide");
+//     }
+//     return isValid;
+// }
+</script>

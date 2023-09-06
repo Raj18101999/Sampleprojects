@@ -1,0 +1,2 @@
+module DailsHelper
+end
