@@ -1,0 +1,10 @@
+<h1 align = center>Admin</h1>
+
+<% if current_view %>
+<h4 align = center><%= link_to 'sign_out',destroy_view_session_path,method: :delete %></h4>
+
+<% else %>
+<h4 align = center><%= link_to 'sign_up',new_view_registration_path %><h4>
+
+<h4 align = center><%= link_to 'sign_in',new_view_session_path  %></h4>
+<% end %>
